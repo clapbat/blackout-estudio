@@ -1,0 +1,16 @@
+<h1>Bookings</h1>
+
+<%= simple_form_for (@booking) do |f| %>
+            <%= f.input :date, as: :date, html5: true, placeholder: 'Start date' %>
+            <%= f.input :price, placeholder: 'Price'%>
+            <%= f.input :service, placeholder: 'Service'%>
+
+                          <% if @booking.errors.any? %>
+                <div class="alert alert-danger">
+                  <% @booking.errors.full_messages.each do |message| %>
+                    <p><%= message %></p>
+                  <% end %>
+                </div>
+              <% end %>
+          <%= f.submit class: 'btn btn-flat' %>
+<% end %>
