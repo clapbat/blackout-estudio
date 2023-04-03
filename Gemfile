@@ -62,3 +62,4 @@ group :development do
 end
 
 gem "simple_form"
+gem "bulma-rails", "~> 0.9.4"
